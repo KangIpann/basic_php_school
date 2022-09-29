@@ -3,7 +3,7 @@ session_start();
 include '../connect.php';
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 if ($username == "" || $password == "") {
     header("location: form-login.php");
@@ -13,9 +13,12 @@ if ($username == "" || $password == "") {
     $num = mysqli_num_rows($result);
 
     if ($num == 1) {
-        header("location: ../dosen/read.php");
+        $dt_login = mysqli_fetch_assoc($result);
         $_SESSION['user'] = $username;
+        $_SESSION['akses'] = $dt_login['akses'];
+        header("location: ../dosen/read.php");
     } else {
+
         header("location: form-login.php");
     }
 }

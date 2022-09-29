@@ -1,9 +1,10 @@
 <?php
-session_start();
+include '../connect.php';
+include '../login/header.php';
 if (!(isset($_SESSION['user']))) {
     header("location: ../login/form-login.php");
 }
-include '../connect.php';
+
 
 $query = 'SELECT * FROM dosen';
 $result = mysqli_query($connect, $query);
