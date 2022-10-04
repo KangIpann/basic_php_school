@@ -22,7 +22,7 @@
         <textarea name="alamat" class="form-control" rows="4"><?= $dt_siswa['alamat'] ?></textarea>
         Nomor Telepon :
         <input type="text" name="no_telp" value="<?= $dt_siswa['no_telp'] ?>" class="form-control">
-        <input type="submit" name="simpan" value="Ubah Siswa" class="btn btn-primary">
+        <input type="submit" name="simpan" value="Ubah Outlet" class="btn btn-primary">
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -36,18 +36,18 @@ if ($_POST) {
     $alamat = $_POST['alamat'];
     $no_telp = $_POST['no_telp'];
     if (empty($nama)) {
-        echo "<script>alert('nama outlet tidak boleh kosong');location.href='tambah_siswa.php';</script>";
+        echo "<script>alert('nama outlet tidak boleh kosong');location.href='ubah_outlet.php';</script>";
     } elseif (empty($alamat)) {
-        echo "<script>alert('alamat tidak boleh kosong');location.href='tambah_siswa.php';</script>";
+        echo "<script>alert('alamat tidak boleh kosong');location.href='ubah_outlet.php';</script>";
     } elseif (empty($no_telp)) {
-        echo "<script>alert('nomor telepon tidak boleh kosong');location.href='tambah_siswa.php';</script>";
+        echo "<script>alert('nomor telepon tidak boleh kosong');location.href='ubah_outlet.php';</script>";
     } else {
         include "koneksi.php";
         $update = mysqli_query($connection, "update daftar_outlet set nama='" . $nama . "',alamat='" . $alamat . "', no_telp='" . $no_telp . "' where id = '" . $id . "'") or die(mysqli_error($connection));
         if ($update) {
-            echo "<script>alert('Sukses update siswa');location.href='read_outlet.php';</script>";
+            echo "<script>alert('Sukses update outlet');location.href='read_outlet.php';</script>";
         } else {
-            echo "<script>alert('Gagal update siswa');location.href='ubah_outlet.php?id_siswa=" . $id . "';</script>";
+            echo "<script>alert('Gagal update outlet');location.href='ubah_outlet.php?id=" . $id . "';</script>";
         }
     }
 }

@@ -1,8 +1,9 @@
 <?php
 session_start();
-if ($_SESSION['status_login'] != true) {
+if ($_SESSION['status_login'] = false) {
     header('location: login.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,9 @@ if ($_SESSION['status_login'] != true) {
                         <a class="nav-link" aria-current="page" href="read_outlet.php">Daftar Outlet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="histori_peminjaman.php">Member</a>
+                        <a class="nav-link" aria-current="page" href="read_paket.php">Paket</a>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="read_member.php">Member</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="logout.php">Logout</a>

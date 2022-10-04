@@ -15,6 +15,7 @@ if ($_POST) {
             $_SESSION['id'] = $dt_login['id'];
             $_SESSION['nama'] = $dt_login['nama'];
             $_SESSION['role'] = $dt_login['role'];
+            $_SESSION['username'] = $dt_login['username'];
             header("location: home.php");
         } else {
             echo "<script>alert('Username dan Password tidak benar');location.href='login.php';</script>";
