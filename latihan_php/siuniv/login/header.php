@@ -23,7 +23,9 @@ if ($_SESSION['user'] == NULL) {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+
+                <li class="nav-item">
+                    
                         <a class="nav-link active" aria-current="page" href="home.php">Home</a>
                     </li>
                     <li class="nav-item">
@@ -46,3 +48,4 @@ if ($_SESSION['user'] == NULL) {
         </div>
     </nav>
     <div class="container bg-light rounded" style="margin-top:10px">
+    

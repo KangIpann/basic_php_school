@@ -29,7 +29,7 @@
         Harga :
         <input name="harga" type="text" class="form-control">
         </input>
-        <input type="submit" name="simpan" value="Tambahkan Paket" class="btn btn-primary">
+        <input type="submit" name="simpan" value="Ubah Paket" class="btn btn-primary">
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

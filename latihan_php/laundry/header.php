@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status_login'] = false) {
+if ($_SESSION['status_login'] != true) {
     header('location: login.php');
 }
 
@@ -32,8 +32,12 @@ if ($_SESSION['status_login'] = false) {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="read_paket.php">Paket</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="read_member.php">Member</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="read_user.php">User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
